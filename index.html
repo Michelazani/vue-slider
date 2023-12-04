@@ -17,7 +17,7 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item" v-for="(element, index) in slides" v-show="index === slide">
-                    <img :src="element.image" alt="Spiderman" />
+                    <img :src="element.image" :alt="element.title" />
                     <div class="text">
                         <h3>{{ element.title }}</h3>
                         <p>
@@ -27,8 +27,8 @@
                 </div>
 
                 <div class="thumbs">
-                    <button class="prev" @click="decrementIndex(1)"></button>
-                    <button class="next" @click="incrementIndex(1)"></button>
+                    <button class="prev" @click="decrementIndex()"></button>
+                    <button class="next" @click="incrementIndex()"></button>
                     <div class="thumb active">
                         <img src="img/01.webp" alt="Svezia" />
                     </div>

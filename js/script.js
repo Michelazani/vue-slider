@@ -31,11 +31,19 @@ createApp({
                 }
             },
     methods: {
-        decrementIndex(number) {
-            this.slide = this.slide - number;
+        decrementIndex() {
+            this.slide = this.slide - 1;
+            if(this.slide <0){
+                this.slide = this.slide.lenght -1;
+            }
+
+            // IF DA SISTEMARE
         },
-        incrementIndex(number) {
-            this.slide = this.slide + number;
+        incrementIndex() {
+            this.slide = this.slide + 1;
+           if(this.slide >= this.slide.lenght){
+                this.slide = 0;
+            }
         },
     },
 }).mount('#app'); 
